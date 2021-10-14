@@ -28,7 +28,7 @@ function Form(props) {
         fullname : yup.string().matches(/^[a-zA-Z\s]+$/,"can only contain alphabet characters").required(),
         nric : yup.string().required().matches(/^[GTSF]\d{7}[A-Z]$/,"NRIC format is not valid"),
         address : yup.string().min(10,"Input at least 10 Characters").max(80,"Maximal input is 80 Characters"),
-        phone_number : yup.string().min(10).matches(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,"Your phone number is not valid")
+        phone_number : yup.string().min(10).matches(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g,"Your phone number is not valid")
         
     })
 
